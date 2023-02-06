@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        #nav{
+            background-color: yellow;
+            font-size: 30px;
+            padding: 10px 10px ;
+        }
+        #block{
+            font-size: 30px;
+            display: grid;
+            margin-top: 20px;
+            grid-template-columns:repeat(4,1fr) ;
+            grid-template-rows: repeat(1,200px);
+            gap: 20px;
+            color: hsla(9, 85%, 67%, 0.2);
+       color: hsl(23, 45%, 56%);
+color: darkIndigo;
+        }
+        #block>div:nth-child(1){
+            background-color: red;
+        }
+        #block>div:nth-child(2){
+            background-color: rgb(57, 228, 57);
+        }
+        #block>div:nth-child(3){
+            background-color:rgb(74, 74, 203);
+        }
+        #block>div:nth-child(4){
+            background-color: gray;
+        }
+
+        /*Medium screen*/
+        @media only screen and (max-width:720px) {
+            #block{
+                font-size: 30px;
+               
+                margin-top: 20px;
+                grid-template-columns:repeat(2,1fr) ;
+                grid-template-rows: repeat(2,200px);
+                gap: 20px;
+            }
+        }
+        /*small screen*/
+        @media only screen and (max-width:320px) {
+            #block{
+                font-size: 30px;
+                margin-top: 20px;
+                grid-template-columns:repeat(1,1fr) ;
+                grid-template-rows: repeat(4,200px);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div>Navigation</div>
+    </div>
+    <div id="block">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+    </div>
+</body>
+</html>

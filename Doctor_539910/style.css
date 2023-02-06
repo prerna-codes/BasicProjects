@@ -1,0 +1,101 @@
+/* Write your styles here  */
+
+body {
+ text-align: center;
+}
+#header{
+  text-align: center;
+  margin-bottom: 30px;
+}
+#doctors{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(1,1fr);
+  gap: 10px;
+  margin-top: 20px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+#doctors >div{
+  width: 100%;
+  /*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;*/
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#doctors div>div button{
+   margin-left: 25px;
+   margin-right: 20px;
+   border-radius:50px;
+   background-color: rgb(246, 85, 16);
+  color: white;
+  border: none;
+  padding:5px 5px;
+  margin-bottom: 10px;
+}
+#service{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 20px;
+  margin-top: 30px;
+  text-align: center;
+  align-items:center ;
+  justify-content: center;
+  margin: auto;
+  margin-left: 40px ;
+  margin-right: 40px;
+}
+#service >div{
+  width: 90%;
+}
+#doctors img{
+  width: 100%;
+}
+
+
+
+
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #doctors{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+  }
+  #service{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+    align-items:center ;
+    justify-content: center;
+    margin: auto;
+    margin-left: 40px ;
+    margin-right: 40px;
+  }
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #doctors{
+    display: grid;
+   grid-template-columns: repeat(1,1fr);
+    
+  }
+  #service{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+    align-items:center ;
+    justify-content: center;
+    margin: auto;
+    margin-left: 40px ;
+    margin-right: 40px;
+  }
+}
